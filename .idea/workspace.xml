@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="298fef7b-2d5a-412a-9e37-bc4c01f2b579" name="Default" comment="" />
+    <list default="true" id="298fef7b-2d5a-412a-9e37-bc4c01f2b579" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,15 +77,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandRegister.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/paranoidcake/KotlinLoginSecurity/Commands/CommandRegister.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,11 +95,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerListener.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerListener.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/paranoidcake/KotlinLoginSecurity/PlayerListener.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -128,6 +130,9 @@
     <replaceStrings>
       <replace>KotLogin</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -154,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/com/paranoidcake/KotlinLoginSecurity/Commands/CommandAddJail.kt" />
         <option value="$PROJECT_DIR$/src/com/paranoidcake/KotlinLoginSecurity/PlayerHandler.kt" />
         <option value="$PROJECT_DIR$/src/com/paranoidcake/KotlinLoginSecurity/PlayerListener.kt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -163,6 +169,7 @@
     <option name="width" value="1908" />
     <option name="height" value="855" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -176,6 +183,51 @@
           <expand>
             <path>
               <item name="KotlinLoginSecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinLoginSecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinLoginSecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinLoginSecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinLoginSecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinLoginSecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="paranoidcake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinLoginSecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="paranoidcake" type="462c0819:PsiDirectoryNode" />
               <item name="KotlinLoginSecurity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -284,6 +336,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="-15" width="1908" height="855" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -293,7 +346,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32968536" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
@@ -322,13 +375,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/paranoidcake/KotlinLoginSecurity/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/paranoidcake/KotlinLoginSecurity/PlayerHandler.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
@@ -628,6 +674,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
