@@ -1,4 +1,4 @@
-package com.paranoidcake.kotlinLoginSecurity
+package com.paranoidcake.KotlinLoginSecurity
 
 import org.bukkit.ChatColor
 import org.bukkit.event.EventHandler

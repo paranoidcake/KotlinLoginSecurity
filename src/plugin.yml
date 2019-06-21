@@ -1,7 +1,7 @@
-name: kotlinLoginSecurity
+name: KotlinLoginSecurity
 version: 1.0
 author: paranoidcake
-main: com.paranoidcake.kotlinLoginSecurity.Main
+main: com.paranoidcake.KotlinLoginSecurity.Main
 api-version: 1.14
 commands:
   register:
@@ -22,3 +22,7 @@ commands:
     aliases: [rmjail]
     description: "Removes the specified pre-login jail"
     usage: "Usage /removejail <jailID>"
+  reregister:
+    aliases: [rereg]
+    description: "Re-registers your username if you are logged in"
+    usage: "Usage /reregister <password>"

@@ -1,4 +1,4 @@
-package com.paranoidcake.kotlinLoginSecurity
+package com.paranoidcake.KotlinLoginSecurity
 
 import org.bukkit.Bukkit
 import org.bukkit.GameMode
@@ -20,7 +20,7 @@ class PlayerHandler {
             Main.jailedPlayers[player.uniqueId] = true
 
             if(hideInventory) {
-                Main.inventories[player.uniqueId.toString()] = player.inventory.contents
+//                Main.inventories[player.uniqueId.toString()] = player.inventory.contents
 
                 if(Main.inventoryData.get("${player.uniqueId}") == null) {
                     Main.inventoryData.set("${player.uniqueId}.size", player.inventory.contents.size)
@@ -56,7 +56,7 @@ class PlayerHandler {
             player.addPotionEffect(PotionEffect(PotionEffectType.JUMP, Int.MAX_VALUE, 128))
         }
 
-        fun unJailPlayer(player: Player, returnPlayer:Boolean=true) {
+        fun unJailPlayer(player: Player, returnPlayer: Boolean = true, recoverInventory: Boolean = true) {
             Main.jailedPlayers[player.uniqueId] = false
 
             player.walkSpeed = 0.2f
@@ -78,16 +78,19 @@ class PlayerHandler {
                 }
             }
 
-            // TODO: Fix "LinkedHashMap as ItemStack ClassCastException
-            // player.inventory.contents = Main.inventories.getOrDefault(player.uniqueId.toString(), recoverInventory(player.uniqueId.toString()))
+            if(recoverInventory) {
+                // TODO: Fix "LinkedHashMap as ItemStack ClassCastException
+                //  Main.inventories is a non-nullable array while the player inventory can have values of ItemStack or null; must change implementation of Main.inventories to match
+                //
+                // player.inventory.contents = Main.inventories.getOrDefault(player.uniqueId.toString(), recoverInventory(player.uniqueId.toString()))
 
-            // Always using recoverInventory() for now
-            player.inventory.contents = recoverInventory(player.uniqueId.toString())
-            player.updateInventory()
+                // Always using recoverInventory() for now
+                player.inventory.contents = recoverInventory(player.uniqueId.toString())
+                player.updateInventory()
 
-            Main.inventoryData.set(player.uniqueId.toString(), null)
-            Main.inventoryData.save(Main.inventoryFile)
-
+                Main.inventoryData.set(player.uniqueId.toString(), null)
+                Main.inventoryData.save(Main.inventoryFile)
+            }
             Main.log("Player ${player.name} unjailed")
         }
 

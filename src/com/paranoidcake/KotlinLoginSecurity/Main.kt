@@ -1,6 +1,6 @@
-package com.paranoidcake.kotlinLoginSecurity
+package com.paranoidcake.KotlinLoginSecurity
 
-import com.paranoidcake.kotlinLoginSecurity.commands.*
+import com.paranoidcake.KotlinLoginSecurity.commands.*
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.Location
@@ -10,14 +10,13 @@ import java.util.*
 import kotlin.collections.HashMap
 import java.io.File
 import org.bukkit.configuration.file.YamlConfiguration
-import org.bukkit.inventory.ItemStack
 import kotlin.collections.ArrayList
 
 class Main: JavaPlugin() {
     companion object {
         val loggedPlayers = HashMap<UUID, Boolean>()
         val jailedPlayers = HashMap<UUID, Boolean>()
-        val inventories = HashMap<String, Array<ItemStack>>()
+//        val inventories = HashMap<String, Array<ItemStack>>() TODO: See PlayerHandler.kt
 
         lateinit var passwords: HashMap<String, String>
         lateinit var jails: ArrayList<Location>
@@ -41,10 +40,10 @@ class Main: JavaPlugin() {
 
         fun log(message: String) {
 
-            Bukkit.getLogger().info("[kotlinLoginSecurity] $message")
+            Bukkit.getLogger().info("[KotlinLoginSecurity] $message")
         }
         fun error(message: String) {
-            Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "[kotlinLoginSecurity] &4Error: $message"))
+            Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "[KotlinLoginSecurity] &4Error: $message"))
         }
     }
 
@@ -52,7 +51,7 @@ class Main: JavaPlugin() {
     private val jailsData = YamlConfiguration.loadConfiguration(jailsFile)
 
     override fun onEnable() {
-        pluginRef = server.pluginManager.getPlugin("kotlinLoginSecurity")!!
+        pluginRef = server.pluginManager.getPlugin("KotlinLoginSecurity")!!
 
         // --------------------- Assign lateinit vars
         playerPosFile = File(dataFolder, "playerPositions.yml")
