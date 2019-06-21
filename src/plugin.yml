@@ -6,23 +6,19 @@ api-version: 1.14
 commands:
   register:
     aliases: [reg]
-    description: "Register your username"
+    description: "Registers your username"
     usage: "Usage: /register <password>"
   login:
-    description: "Login to your account"
+    description: "Logs in to your account"
     usage: "Usage: /login <password>"
   addjail:
-    description: "Add a pre-login jail"
+    description: "Adds a pre-login jail"
     usage: "Usage /addjail [spawn | position]"
   listjails:
     aliases: [lsjails]
-    description: "List all current pre-login jail IDs and positions"
+    description: "Lists all current pre-login jail IDs and positions"
     usage: "Usage /listjails"
   removejail:
     aliases: [rmjail]
     description: "Removes the specified pre-login jail"
     usage: "Usage /removejail <jailID>"
-  unregister:
-    aliases: [unreg]
-    description: "Unregisters your username"
-    usage: "Usage: /unregister"

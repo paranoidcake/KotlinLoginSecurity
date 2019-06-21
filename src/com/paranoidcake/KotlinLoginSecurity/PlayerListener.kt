@@ -39,7 +39,7 @@ class PlayerListener: Listener {
 
     @EventHandler
     fun onDisconnect(event: PlayerQuitEvent) {
-
+        Main.attempts[event.player.uniqueId] = 0
         Main.loggedPlayers[event.player.uniqueId] = false
     }
 
