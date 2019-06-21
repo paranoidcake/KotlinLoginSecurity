@@ -12,9 +12,9 @@ class CommandUnregister: CommandExecutor {
         if (sender !is Player) return false
 
         return when {
-            Main.loggedPlayers.getOrDefault(sender.uniqueId, false) -> {
+            Main.loggedPlayers.getOrDefault(sender.uniqueId.toString(), false) -> {
                 Main.passwords.minus(sender.uniqueId.toString())
-                Main.loggedPlayers[sender.uniqueId] = false
+                Main.loggedPlayers[sender.uniqueId.toString()] = false
 
                 Main.passwordData[sender.uniqueId.toString()] = null
                 Main.passwordData.save(Main.passwordFile)

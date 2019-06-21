@@ -11,11 +11,12 @@ class CommandReregister: CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         if (sender !is Player) return false
 
-        val logged = Main.loggedPlayers[sender.uniqueId]
+        val logged = Main.loggedPlayers[sender.uniqueId.toString()]
         val message = args.joinToString()
 
         return if(logged != null) {
             if(logged == true) {
+                Main.passwords[sender.uniqueId.toString()] = message
                 sender.sendMessage("[KotLogin]: ${ChatColor.GREEN}Successfully re-registered!")
 
                 true

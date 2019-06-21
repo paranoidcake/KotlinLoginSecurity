@@ -12,7 +12,7 @@ class PlayerListener: Listener {
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {
         if (Main.passwords.containsKey(event.player.uniqueId.toString())) {
-            if(Main.loggedPlayers[event.player.uniqueId] == true) {
+            if(Main.loggedPlayers[event.player.uniqueId.toString()] == true) {
 
                 event.player.kickPlayer("[KotLogin]: Account already logged in")
             } else {
@@ -29,7 +29,7 @@ class PlayerListener: Listener {
                 event.player.sendMessage("[KotLogin]: ${ChatColor.YELLOW}Please login to your account with /login <password>")
             }
         } else {
-            Main.loggedPlayers[event.player.uniqueId] = false
+            Main.loggedPlayers[event.player.uniqueId.toString()] = false
 
             event.player.sendMessage("[KotLogin]: ${ChatColor.YELLOW}WIP Plugin")
             event.player.sendMessage("[KotLogin]: ${ChatColor.RED}Please register by typing /register <password>")
@@ -40,7 +40,7 @@ class PlayerListener: Listener {
     @EventHandler
     fun onDisconnect(event: PlayerQuitEvent) {
         Main.attempts[event.player.uniqueId] = 0
-        Main.loggedPlayers[event.player.uniqueId] = false
+        Main.loggedPlayers[event.player.uniqueId.toString()] = false
     }
 
     @EventHandler

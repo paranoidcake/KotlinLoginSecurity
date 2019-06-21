@@ -23,9 +23,9 @@ class CommandLogin: CommandExecutor {
                 sender.sendMessage("[KotLogin]: ${ChatColor.YELLOW}Please register first!")
                 true
             }
-            !Main.loggedPlayers.getOrDefault(sender.uniqueId, false) -> {
+            !Main.loggedPlayers.getOrDefault(sender.uniqueId.toString(), false) -> {
                 if (message == Main.passwords[sender.uniqueId.toString()]) {
-                    Main.loggedPlayers[sender.uniqueId] = true
+                    Main.loggedPlayers[sender.uniqueId.toString()] = true
                     PlayerHandler.unJailPlayer(sender)
 
                     sender.sendMessage("[KotLogin]: ${ChatColor.GREEN}Logged in!")

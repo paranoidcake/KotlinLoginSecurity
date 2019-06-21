@@ -14,7 +14,7 @@ import kotlin.collections.ArrayList
 
 class Main: JavaPlugin() {
     companion object {
-        val loggedPlayers = HashMap<UUID, Boolean>()
+        val loggedPlayers = HashMap<String, Boolean>()
         val jailedPlayers = HashMap<UUID, Boolean>()
 //        val inventories = HashMap<String, Array<ItemStack>>() TODO: See PlayerHandler.kt
 
@@ -50,8 +50,26 @@ class Main: JavaPlugin() {
     private val jailsFile = File(dataFolder, "jails.yml")
     private val jailsData = YamlConfiguration.loadConfiguration(jailsFile)
 
+    private val loggedPlayersFile = File(dataFolder, "loggedPlayers.yml")
+    private val loggedPlayersData = YamlConfiguration.loadConfiguration(loggedPlayersFile)
+
     override fun onEnable() {
         pluginRef = server.pluginManager.getPlugin("KotlinLoginSecurity")!!
+
+        try {
+            val preloadLogged = loggedPlayersData["loggedPlayers"] as ArrayList<String>
+
+            preloadLogged.forEach {
+                loggedPlayers[it] = true
+            }
+
+            loggedPlayersData["loggedPlayers"] = null
+            loggedPlayersData.save(loggedPlayersFile)
+        } catch (e: KotlinNullPointerException) {
+            log("No players to log in!")
+        } catch (e: TypeCastException) {
+            log("No players to log in!")
+        }
 
         // --------------------- Assign lateinit vars
         playerPosFile = File(dataFolder, "playerPositions.yml")
@@ -96,18 +114,36 @@ class Main: JavaPlugin() {
 
         this.getCommand("register")!!.setExecutor(CommandRegister())
 //        this.getCommand("unregister")!!.setExecutor(CommandUnregister()) TODO: Handle hot registration
+        this.getCommand("reregister")!!.setExecutor(CommandReregister())
         this.getCommand("login")!!.setExecutor(CommandLogin())
         this.getCommand("listjails")!!.setExecutor(CommandListJails())
         this.getCommand("addjail")!!.setExecutor(CommandAddJail())
         this.getCommand("removejail")!!.setExecutor(CommandRemoveJail())
-
-
     }
 
     override fun onDisable() {
         passwordData.createSection("passwords", passwords)
         passwordData.save(passwordFile)
         log("Passwords saved!")
+
+        val loggedToSave = Array(loggedPlayers.size) { "" }
+        var playerWasLogged = false
+        var i = 0; loggedPlayers.forEach {
+            if(it.value) {
+                loggedToSave[i] = it.key
+            }
+            i++
+        }
+        for(player in loggedToSave) {
+            if (player != "") {
+                loggedPlayersData.set("loggedPlayers", loggedToSave)
+                loggedPlayersData.save(loggedPlayersFile)
+                playerWasLogged = true
+                log("Logged in players saved!")
+
+                break
+            }
+        }
 
         jailsData.set("jails.size", jails.size)
         for(i in 0 until jails.size) {
