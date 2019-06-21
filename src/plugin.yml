@@ -1,7 +1,7 @@
-name: KotlinLoginSecurity
+name: kotlinLoginSecurity
 version: 1.0
 author: paranoidcake
-main: com.paranoidcake.KotlinLoginSecurity.Main
+main: com.paranoidcake.kotlinLoginSecurity.Main
 api-version: 1.14
 commands:
   register:

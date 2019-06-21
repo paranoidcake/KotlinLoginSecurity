@@ -1,6 +1,6 @@
-package com.paranoidcake.KotlinLoginSecurity
+package com.paranoidcake.kotlinLoginSecurity
 
-import com.paranoidcake.KotlinLoginSecurity.Commands.*
+import com.paranoidcake.kotlinLoginSecurity.commands.*
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.Location
@@ -41,10 +41,10 @@ class Main: JavaPlugin() {
 
         fun log(message: String) {
 
-            Bukkit.getLogger().info("[KotlinLoginSecurity] $message")
+            Bukkit.getLogger().info("[kotlinLoginSecurity] $message")
         }
         fun error(message: String) {
-            Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "[KotlinLoginSecurity] &4Error: $message"))
+            Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "[kotlinLoginSecurity] &4Error: $message"))
         }
     }
 
@@ -52,7 +52,7 @@ class Main: JavaPlugin() {
     private val jailsData = YamlConfiguration.loadConfiguration(jailsFile)
 
     override fun onEnable() {
-        pluginRef = server.pluginManager.getPlugin("KotlinLoginSecurity")!!
+        pluginRef = server.pluginManager.getPlugin("kotlinLoginSecurity")!!
 
         // --------------------- Assign lateinit vars
         playerPosFile = File(dataFolder, "playerPositions.yml")

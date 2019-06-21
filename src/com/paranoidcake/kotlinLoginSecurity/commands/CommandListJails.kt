@@ -1,6 +1,6 @@
-package com.paranoidcake.KotlinLoginSecurity.Commands
+package com.paranoidcake.kotlinLoginSecurity.commands
 
-import com.paranoidcake.KotlinLoginSecurity.Main
+import com.paranoidcake.kotlinLoginSecurity.Main
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
